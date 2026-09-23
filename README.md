@@ -1,27 +1,22 @@
 # 📖 StoryForge
 
-A website that writes your story chapter by chapter from the details you give it:
-plot, characters, genre, tone, POV, setting, rules and style. Everything is editable.
+A completely free, browser-based story-writing workspace.
 
-No server, no build step. It's plain HTML/CSS/JS.
+It lets you plan your plot, add characters, create chapter outlines, write chapters directly in the browser, see live word counts, save projects as JSON, and download stories as Markdown.
 
 ## Run it
-- **Locally:** open `index.html` in your browser.
-- **Online (free):** push this repo to GitHub, then go to
-  *Settings → Pages → Deploy from a branch → main / (root)*.
-  Your site appears at `https://<you>.github.io/<repo>/`.
 
-## Use it
-1. Open **API key & model** and paste your Anthropic API key
-   (get one at console.anthropic.com).
-2. Fill in **Story** and **Characters**.
-3. **Generate outline**, then edit or add chapters.
-4. **Write** one chapter at a time or all at once. Edit the text, or add notes
-   and hit Rewrite.
-5. Download the story as Markdown, or save the project as JSON to load later.
+Open `index.html` in your browser. You can also deploy the folder to GitHub Pages for free.
 
-## Privacy and cost
-- Your key and story are saved in your browser (localStorage) and are sent only
-  to Anthropic. Anyone using your deployed site must enter their own key.
-- Only use it on your own device, since the key is handled in the browser.
-- Writing uses your API credits.
+## No API key
+
+This version does **not** use Anthropic, OpenAI, or any other AI API. There is no API key, no account required, and no paid credits. Your writing is stored locally in your browser with `localStorage`. Nothing is sent to an AI service.
+
+## Workflow
+
+1. Fill in the Story section.
+2. Add your characters.
+3. Choose how many chapters you want and click **Add chapters**.
+4. Edit each chapter title and summary.
+5. Write directly in the chapter boxes.
+6. Export the finished story as `.md` or save the whole project as `.json`.

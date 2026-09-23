@@ -7,13 +7,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><h1>📖 StoryForge</h1><p>Give it the details. It writes the story chapter by chapter.</p></header>
+<header><h1>📖 StoryForge</h1><p>Plan your story, write it chapter by chapter, and keep everything saved in your browser.</p></header>
 <main>
-<details id="settings"><summary>🔑 API key &amp; model</summary>
-  <p class="hint">Your key is saved only in this browser and sent only to Anthropic.</p>
-  <input id="key" type="password" placeholder="Anthropic API key (sk-ant-...)">
-  <input id="model" placeholder="Model (default: claude-sonnet-5)">
-</details>
+<section class="free-note">
+  <strong>✨ 100% free &amp; no API key</strong>
+  <p class="hint">This version is a writing workspace only. Nothing is sent to an AI service, and your story stays in your browser.</p>
+</section>
 
 <section><h2>1 · Story</h2>
   <label>Title<input data-k="title"></label>
@@ -33,13 +32,13 @@
 <section><h2>2 · Characters</h2><div id="chars"></div><button data-act="addChar">+ Add character</button></section>
 
 <section><h2>3 · Outline</h2>
-  <div class="row"><input id="nch" type="number" value="8" min="1" max="60"><button data-act="outline" class="primary">✨ Generate outline</button></div>
+  <div class="row"><input id="nch" type="number" value="8" min="1" max="60"><button data-act="outline" class="primary">＋ Add chapters</button></div>
   <div id="outline"></div><button data-act="addCh">+ Add chapter</button>
 </section>
 
 <section><h2>4 · Write</h2>
-  <div class="row"><button data-act="next" class="primary">✍️ Write next chapter</button><button data-act="all">⚡ Write all remaining</button></div>
-  <p id="status" class="hint"></p><div id="chapters"></div>
+  <p class="hint">Write directly in the chapter boxes below. Your work saves automatically in your browser.</p>
+  <div id="chapters"></div>
 </section>
 
 <section><h2>Save &amp; export</h2><div class="row">

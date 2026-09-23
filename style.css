@@ -17,3 +17,5 @@ button.primary{background:var(--acc);color:#fff;border-color:var(--acc)}
 .item{border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0}
 .hint{font:13px system-ui;opacity:.7}
 .item textarea.chapter{min-height:320px}
+
+.free-note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
