@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StoryForge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>📖 StoryForge</h1><p>Give it the details. It writes the story chapter by chapter.</p></header>
+<main>
+<details id="settings"><summary>🔑 API key &amp; model</summary>
+  <p class="hint">Your key is saved only in this browser and sent only to Anthropic.</p>
+  <input id="key" type="password" placeholder="Anthropic API key (sk-ant-...)">
+  <input id="model" placeholder="Model (default: claude-sonnet-5)">
+</details>
+
+<section><h2>1 · Story</h2>
+  <label>Title<input data-k="title"></label>
+  <label>Plot / premise<textarea data-k="premise" rows="5" placeholder="As short or detailed as you like"></textarea></label>
+  <div class="grid">
+    <label>Genre(s)<input data-k="genre"></label>
+    <label>Tone / vibe<input data-k="tone"></label>
+    <label>Point of view<select data-k="pov"><option>First person</option><option>Third person limited</option><option>Third person omniscient</option><option>Second person</option></select></label>
+    <label>Tense<select data-k="tense"><option>Past</option><option>Present</option></select></label>
+  </div>
+  <label>Setting / world<textarea data-k="setting" rows="3"></textarea></label>
+  <label>Rules, themes, must-include / must-avoid<textarea data-k="rules" rows="3"></textarea></label>
+  <label>Style notes<input data-k="style" placeholder="e.g. witty like Pratchett, sparse and lyrical"></label>
+  <label>Words per chapter<input data-k="words" type="number" min="300" max="4000" step="100"></label>
+</section>
+
+<section><h2>2 · Characters</h2><div id="chars"></div><button data-act="addChar">+ Add character</button></section>
+
+<section><h2>3 · Outline</h2>
+  <div class="row"><input id="nch" type="number" value="8" min="1" max="60"><button data-act="outline" class="primary">✨ Generate outline</button></div>
+  <div id="outline"></div><button data-act="addCh">+ Add chapter</button>
+</section>
+
+<section><h2>4 · Write</h2>
+  <div class="row"><button data-act="next" class="primary">✍️ Write next chapter</button><button data-act="all">⚡ Write all remaining</button></div>
+  <p id="status" class="hint"></p><div id="chapters"></div>
+</section>
+
+<section><h2>Save &amp; export</h2><div class="row">
+  <button data-act="exportMd">Download story (.md)</button>
+  <button data-act="exportJson">Save project (.json)</button>
+  <label class="btn">Load project<input id="load" type="file" accept=".json" hidden></label>
+  <button data-act="reset">New story</button></div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
